@@ -1,0 +1,449 @@
+ .main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.menu-card {
+    background: linear-gradient(135deg, #f8fafc 60%, #e3eafc 100%);
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(44,62,80,0.15);
+    padding: 32px 18px 20px 18px;
+    width: 270px;
+    min-width: 220px;
+    max-width: 270px;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1.5px solid #e0eafc;
+    box-sizing: border-box;
+}
+.menu-card:hover {
+    box-shadow: 0 20px 56px rgba(44,62,80,0.20);
+    transform: translateY(-6px) scale(1.04);
+}
+.menu-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    margin-bottom: 8px;
+}
+@media (max-width: 900px) {
+    .main-menu {
+        gap: 16px;
+    }
+    .menu-card {
+        width: 100%;
+        min-width: 180px;
+        max-width: 100%;
+        min-height: 0;
+        margin-bottom: 18px;
+    }
+}
+.menu-card:hover {
+    box-shadow: 0 20px 56px rgba(44,62,80,0.20);
+    transform: translateY(-6px) scale(1.04);
+}
+.menu-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    margin-bottom: 8px;
+}
+.menu-card:hover {
+    box-shadow: 0 16px 40px rgba(44,62,80,0.18);
+    transform: translateY(-4px) scale(1.03);
+}
+.menu-btn {
+    margin-bottom: 8px;
+}
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 180px;
+}
+.menu-desc {
+    color: #34495e;
+    font-size: 0.98rem;
+    text-align: center;
+    margin: 0 0 8px 0;
+    opacity: 0.85;
+    font-weight: 500;
+}
+.form-section {
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0eafc;
+}
+.form-section:last-child {
+    border-bottom: none;
+}
+.form-section h3 {
+    color: #2980b9;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.form-card {
+    background: linear-gradient(135deg, #f8fafc 60%, #e3eafc 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+    padding: 32px 28px;
+    max-width: 480px;
+    margin: 0 auto 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.form-card label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+.form-card input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #b2bec3;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    background: #fff;
+    transition: border 0.2s;
+}
+.form-card input:focus {
+    border: 1.5px solid #2980b9;
+    outline: none;
+}
+.submit-btn {
+    background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    background: linear-gradient(90deg, #1a5a8a 0%, #2980b9 100%);
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    transform: scale(1.04);
+}
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #e0eafc 60%, #cfdef3 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    margin-bottom: 10px;
+}
+/* Cards de opciones de formulario */
+/* Cards de opciones de formulario - estilo profesional */
+.card-options {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.card-form {
+    background: linear-gradient(135deg, #f8fafc 60%, #e3eafc 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+    padding: 32px 24px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid #e0eafc;
+}
+.card-form:hover {
+    box-shadow: 0 16px 40px rgba(44,62,80,0.18);
+    transform: translateY(-4px) scale(1.03);
+}
+.card-form .type-btn {
+    margin-bottom: 16px;
+    width: 100%;
+    background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    letter-spacing: 0.5px;
+}
+.card-form .type-btn:hover {
+    background: linear-gradient(90deg, #1a5a8a 0%, #2980b9 100%);
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    transform: scale(1.04);
+}
+.card-desc {
+    text-align: center;
+    color: #34495e;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+@media (max-width: 900px) {
+    .card-options {
+        gap: 16px;
+    }
+    .card-form {
+        width: 100%;
+        margin-bottom: 18px;
+    }
+}
+@media (max-width: 900px) {
+    .card-options {
+        gap: 12px;
+    }
+    .card-form {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+/* Submenú de tipo de miembro */
+.type-menu {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+.type-btn {
+    background: #f6f8fa;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #636e72;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.type-btn:hover, .type-btn.active {
+    background: #27ae60;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    margin: 0;
+    min-height: 100vh;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+    padding: 32px 40px;
+}
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.logo {
+    width: 80px;
+    margin-bottom: 12px;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+}
+.subtitle {
+    color: #2980b9;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+/* Menú moderno */
+/* Menú principal profesional */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.10);
+    padding: 18px 0;
+}
+.menu-btn {
+    background: linear-gradient(135deg, #f8fafc 60%, #e3eafc 100%);
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+    padding: 16px 36px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2980b9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border: 1.5px solid #e0eafc;
+}
+.menu-btn:hover, .menu-btn.active {
+    background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+    transform: scale(1.04);
+    border: 1.5px solid #2980b9;
+}
+.menu-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    border: 2px solid #e0eafc;
+}
+/* Menú de tipo de formulario */
+.type-menu {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 32px;
+}
+.type-btn {
+    background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    padding: 12px 32px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    letter-spacing: 0.5px;
+    outline: none;
+}
+.type-btn:hover, .type-btn.active {
+    background: linear-gradient(90deg, #1a5a8a 0%, #2980b9 100%);
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    transform: scale(1.04);
+}
+form {
+    margin-bottom: 32px;
+    background: #f6f8fa;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+}
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2d3436;
+}
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #b2bec3;
+    font-size: 1rem;
+}
+form button {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+form button:hover {
+    background: #1a5a8a;
+}
+#membersSection {
+    margin-top: 24px;
+}
+#membersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 18px;
+}
+#membersTable th, #membersTable td {
+    border: 1px solid #dfe6e9;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
+}
+#membersTable th {
+    background: #dff9fb;
+    color: #2980b9;
+    font-weight: 700;
+}
+.pdf-btn {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.pdf-btn:hover {
+    background: #219150;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 16px 8px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .main-menu {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .menu-btn {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

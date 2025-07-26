@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Jóvenes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo/central.png" alt="Logo" class="logo">
+            <h1>Registro de Jóvenes</h1>
+        </header>
+        <section id="formSection">
+            <form id="memberForm" class="form-card">
+                <div class="form-section">
+                    <h3>Información Personal</h3>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" name="nombre" id="nombre" required />
+                    <label for="iglesia">Iglesia</label>
+                    <select name="iglesia" id="iglesia" required>
+                        <option value="">Seleccione iglesia</option>
+                        <option value="Central">Central</option>
+                        <option value="El Pital">El Pital</option>
+                        <option value="El Sauce">El Sauce</option>
+                        <option value="La Tekera">La Tekera</option>
+                    </select>
+                    <label for="genero">Género</label>
+                    <select name="genero" id="genero" required>
+                        <option value="">Seleccione género</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" name="nacimiento" id="nacimiento" required />
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" min="14" max="30" required readonly />
+                </div>
+                <div class="form-section">
+                    <h3>Información Familiar</h3>
+                    <label for="padre">Nombre del padre</label>
+                    <input type="text" name="padre" id="padre" />
+                    <label for="madre">Nombre de la madre</label>
+                    <input type="text" name="madre" id="madre" />
+                    <label for="direccion">Dirección</label>
+                    <input type="text" name="direccion" id="direccion" />
+                </div>
+                <div class="form-section">
+                    <h3>Información Académica</h3>
+                    <label for="institucion">Institución Educativa</label>
+                    <input type="text" name="institucion" id="institucion" />
+                    <label for="carrera">Carrera/Grado</label>
+                    <input type="text" name="carrera" id="carrera" />
+                </div>
+                <div class="form-section">
+                    <h3>Información Espiritual</h3>
+                    <label for="conversion">Fecha de Conversión (opcional)</label>
+                    <input type="date" name="conversion" id="conversion" />
+                    <label for="bautismo_fecha">Fecha de Bautismo (opcional)</label>
+                    <input type="date" name="bautismo_fecha" id="bautismo_fecha" />
+                    <label for="ministerio">Ministerio en el que participa</label>
+                    <input type="text" name="ministerio" id="ministerio" />
+                </div>
+                <div class="form-section">
+                    <h3>Información Médica (opcional)</h3>
+                    <label for="alergias">Alergias</label>
+                    <input type="text" name="alergias" id="alergias" placeholder="Ejemplo: penicilina, polen" />
+                    <label for="condiciones">Condiciones médicas</label>
+                    <input type="text" name="condiciones" id="condiciones" placeholder="Ejemplo: asma, diabetes" />
+                    <label for="medicamentos">Medicamentos que toma</label>
+                    <input type="text" name="medicamentos" id="medicamentos" placeholder="Ejemplo: ibuprofeno, insulina" />
+                    <label for="seguro">Seguro médico</label>
+                    <input type="text" name="seguro" id="seguro" placeholder="Nombre de la aseguradora" />
+                </div>
+                <div class="form-actions" style="display:flex;gap:16px;margin-top:18px;">
+                    <button type="submit" class="submit-btn">Guardar registro</button>
+                </div>
+            </form>
+        </section>
+        <section id="membersSection">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+                <h2>Jóvenes registrados</h2>
+                <a href="index.html" class="download-btn" style="background:#f39c12;color:#fff;padding:8px 18px;border:none;border-radius:6px;font-weight:600;text-decoration:none;box-shadow:0 2px 8px #0001;">Regresar a Inicio</a>
+            </div>
+            <div class="table-actions" style="display:flex;gap:12px;margin-bottom:18px;">
+                <button id="downloadPdfTable" class="download-btn" style="background:#2d89ef;color:#fff;padding:8px 18px;border:none;border-radius:6px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px #0001;">Descargar tabla PDF</button>
+                <button id="downloadXlsTable" class="download-btn" style="background:#27ae60;color:#fff;padding:8px 18px;border:none;border-radius:6px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px #0001;">Descargar tabla XLS</button>
+            </div>
+            <table id="membersTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Iglesia</th>
+                        <th>Género</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Edad</th>
+                        <th>Padre</th>
+                        <th>Madre</th>
+                        <th>Dirección</th>
+                        <th>Institución Educativa</th>
+                        <th>Carrera/Grado</th>
+                        <th>Fecha de Conversión</th>
+                        <th>Fecha de Bautismo</th>
+                        <th>Ministerio</th>
+                        <th>Alergias</th>
+                        <th>Condiciones médicas</th>
+                        <th>Medicamentos</th>
+                        <th>Seguro médico</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </section>
+    </div>
+    <script src="script-jovenes.js"></script>
+    <!-- Librerías para exportar PDF y XLS (deben ir antes del script principal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.7.0/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script-jovenes.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Miembros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo/central.png" alt="Logo Iglesia Central" class="logo">
+            <h1>Registros de Miembros</h1>
+            <p class="subtitle">Listado general de registros de todas las iglesias y tipos</p>
+        </header>
+        <nav class="type-menu">
+            <a href="index.html" class="back-btn">&#8592; Volver al menú principal</a>
+        </nav>
+        <section class="records-section">
+            <table class="records-table">
+                <thead>
+                    <tr>
+                        <th>Iglesia</th>
+                        <th>Tipo</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Fecha de Registro</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="records-body">
+                    <!-- Los registros se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="script-registros.js"></script>
+</body>
+</html>
