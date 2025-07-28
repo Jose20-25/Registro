@@ -5,7 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Jóvenes</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 38px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px #0002;
+            padding: 32px 38px 38px 38px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #0001;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2d89ef;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+        section#formSection {
+            margin-bottom: 38px;
+        }
+        .form-card {
+            background: #f8fafc;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px #0001;
+            padding: 28px 28px 18px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        .form-section {
+            flex: 1 1 320px;
+            min-width: 280px;
+        }
+        .form-section h3 {
+            font-size: 1.1rem;
+            color: #2d89ef;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 500;
+            color: #444;
+        }
+        input, select {
+            width: 100%;
+            padding: 9px 12px;
+            margin-bottom: 14px;
+            border: 1px solid #c3cfe2;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #fff;
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus {
+            border-color: #2d89ef;
+            outline: none;
+        }
+        .form-actions {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+        }
+        .submit-btn {
+            background: linear-gradient(90deg, #2d89ef 60%, #27ae60 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 28px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px #2d89ef22;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(90deg, #27ae60 60%, #2d89ef 100%);
+            box-shadow: 0 4px 16px #27ae6022;
+        }
+        .download-btn {
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            padding: 9px 22px;
+            box-shadow: 0 2px 8px #0001;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .download-btn:hover {
+            filter: brightness(1.08);
+            box-shadow: 0 4px 16px #2d89ef22;
+        }
+        .table-actions {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px #0001;
+        }
+        thead {
+            background: linear-gradient(90deg, #2d89ef 60%, #27ae60 100%);
+            color: #fff;
+        }
+        th, td {
+            padding: 12px 10px;
+            text-align: left;
+            font-size: 0.98rem;
+        }
+        th {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        tbody tr {
+            border-bottom: 1px solid #e3e8ee;
+            transition: background 0.2s;
+        }
+        tbody tr:hover {
+            background: #f5f7fa;
+        }
+        td {
+            color: #333;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 18px 6px 18px 6px;
+            }
+            .form-card {
+                flex-direction: column;
+                gap: 18px;
+                padding: 18px 8px 8px 8px;
+            }
+            table, thead, tbody, th, td, tr {
+                font-size: 0.92rem;
+            }
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+            .form-section {
+                min-width: 100%;
+            }
+            .form-card {
+                padding: 8px 2px 2px 2px;
+            }
+            table, thead, tbody, th, td, tr {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
